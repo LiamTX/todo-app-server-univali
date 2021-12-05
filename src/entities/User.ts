@@ -20,8 +20,8 @@ export class User {
     @prop()
     password: string;
 
-    @prop({ ref: () => Todo })
-    todos?: Ref<Todo>[]
+    @prop({ ref: 'Todo' })
+    todos?: Ref<Todo>[];
 }
 
 const UserModel = getModelForClass(User);
